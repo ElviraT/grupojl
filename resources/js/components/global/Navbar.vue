@@ -4,13 +4,26 @@
         <!-- Right navbar links -->
 
         <ul class="navbar-nav ml-auto">
-            <button
-                :disabled="disable"
-                @click="logout()"
-                class="btn btn-danger"
-            >
-                Logout
-            </button>
+            <li>
+                <h5 class="nav-link">{{ user.name }}</h5>
+            </li>
+            <li class="nav-link position-relative">
+                <i class="far fa-bell nav-icon"
+                    ><span
+                        class="position-absolute start-100 badge rounded-circle bg-light"
+                        >4</span
+                    ></i
+                >
+            </li>
+            <li>
+                <a
+                    href="#"
+                    @click="logout()"
+                    :disabled="disable"
+                    class="nav-link"
+                    ><i class="fa fa-sign-out-alt nav-icon"></i
+                ></a>
+            </li>
         </ul>
     </nav>
     <!-- /.navbar -->
@@ -23,6 +36,7 @@ import Errors from "../partials/Errors.vue";
 export default {
     components: { Errors },
     name: "Navbar",
+    props: ["user"],
     data() {
         return {
             disable: false
@@ -65,5 +79,13 @@ export default {
     padding: 25px;
     border-radius: 14px;
     border: 2px solid #14756a23;
+}
+.nav-icon {
+    font-size: 20px;
+    margin-top: 5px;
+}
+.badge {
+    margin-top: -12px !important;
+    margin-left: -12px;
 }
 </style>

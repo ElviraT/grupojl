@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>{{config('app.name')}}</title>
-
+        <link rel="icon" type="image/png" href="{{asset('assets/images/icon-logo.png')}}">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Mulish:200,600" rel="stylesheet">
 
@@ -65,7 +65,7 @@
                         <a href="{{ route('login') }}">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}">Registrar</a>
                         @endif
                     @endauth
                 </div>
@@ -74,10 +74,10 @@
             <div class="content">
 
                 <div class="title m-b-md">
-                    Laravel + Vue + AdminLte Starter
+                    Grupo JL de Venezuela
                 </div>
 
-                <img class="img-fluid" src="{{ url('assets/images/starter.png') }}">
+                <img class="img-fluid" src="{{ url('assets/images/icon-logo.png') }}">
             </div>
         </div>
     </body>

@@ -6,6 +6,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="icon" type="image/png" href="{{asset('assets/images/icon-logo.png')}}">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -27,7 +28,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@100;200;300;400;500;600;700;800;900&display=swap">
     <style>
         #app {
-            font-family: Mulish !important;
+            font-family: Helvetica !important;
             background: #f4f4f4f4;
         }
     </style>
